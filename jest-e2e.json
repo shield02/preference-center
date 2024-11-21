@@ -24,5 +24,10 @@
     "**/*.(t|j)s"
   ],
   "coverageDirectory": "../coverage",
-  "setupFilesAfterEnv": ["<rootDir>/test/jest-e2e.setup.ts"]
+  "setupFilesAfterEnv": ["<rootDir>/test/jest-e2e.setup.ts"],
+  "testEnvironmentOptions": {
+    "env": {
+      "NODE_ENV": "test"
+    }
+  }
 }
