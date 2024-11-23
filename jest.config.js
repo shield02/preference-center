@@ -16,6 +16,8 @@ module.exports = {
   coverageDirectory: '../coverage',
   testEnvironment: 'node',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
-  }
+    '^src/(.*)$': '<rootDir>/$1',
+  },
+  testTimeout: 30000,
+  setupFilesAfterEnv: ['<rootDir>/../test/setup.ts'],
 };
