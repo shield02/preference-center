@@ -24,7 +24,10 @@ export class UsersService {
             throw new ConflictException('User with this email already exists');
         }
 
-        const newUser = this.userRepository.create(createUserDto);
+        const newUser = this.userRepository.create({
+            ...createUserDto,
+            createdAt: new Date().toISOString(),
+        });
         return await this.userRepository.save(newUser);
     }
 
